@@ -25,3 +25,19 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Informations supplémentaires
+
+### L'objectif du site 
+
+Site web reprenant les fonctionnalités de l'application mobile Jinka qui a pour but de répertorier des annonces de logements en reprenant les annonces d'autres sites (seLoger, BienIci, LogicImmo, etc.). 
+
+### Fonctionnalités 
+
+Sur ce site web l'utilisateur peut se connecter s'il a un compte existant ou s'inscrire s'il n'a pas de compte. Lorsqu'il est connecté il peut accéder à toutes les annonces du site, ces annonces peuvent être ajoutées aux favoris ou supprimer des annonces à afficher. L'utilisateur peut aussi accéder aux détails d'une annonce en cliquant dessus. Il peut aussi accéder à son dossier et modifier les informations de celui-ci. Il peut accéder aux informations de son compte et finalement il peut accéder à ses critères de recherches et les modifier si besoin. 
+
+### Axes d'améliorations
+
+Certaines règles de gestion, au niveau de plusieurs webview, ne sont pas encore mises en place : par exemple on peut choisir un prix maximal inférieur au prix minimal, etc. Le store vient tout juste d'être mis en place,
+il y a donc des fonctionnalités qui ne sont pas encore ou plus fonctionnelles mais qui sont en train d'être corrigées. La librairie tailwind est installée mais je ne l'ai pas utilisée pour travailler au maximum mon CSS.
+De même pour la librairie Angular Material, je voulais travailler au maximum mes compétences HTML, CSS avant d'utiliser cette librairie.
