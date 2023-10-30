@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit{
       this.user2 = JSON.parse(storedUserState)
       this.user = JSON.parse(storedUserState)
       console.log('au début', this.user)
+      console.log(this.listOfRealEstateAdd)
     }
   }
 
@@ -84,6 +85,6 @@ export class HomeComponent implements OnInit{
   }
 
   isNotInTrash(realEstadeAdd: RealEstateAdd){
-    console.log('j euis suuc')
+    return true
   }
 }
