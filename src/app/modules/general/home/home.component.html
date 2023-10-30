@@ -1,0 +1,28 @@
+
+<div class="home">
+    <app-menu></app-menu>
+    <div class="list">
+        <div class="real-estate-add" *ngFor="let realEstateAdd of listOfRealEstateAdd">
+            <div class="box" *ngIf="isNotInTrash(realEstateAdd)">
+                <button class="button1" (click)="setLike(realEstateAdd)">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 959.41 880.1" class="icon"><path d="M479.71,137.75C399.76-79.31,0-45.73,0,280.47c0,162.7,122.33,379,479.71,599.63,357.38-220.66,479.7-436.93,479.7-599.63C959.41-43.73,559.66-79.31,479.71,137.75Z" [ngStyle]="ngStyle(realEstateAdd.id)" stroke-width="20"/></svg>
+                </button>
+                <button class="button2" (click)="putToTrash(realEstateAdd.id)" >
+                    <img src="assets/icons/trash.svg" class="icon">
+                </button>   
+                <a href="/home/{{realEstateAdd.id}}">
+                    <div class="box-left"> 
+                        <img [src]="realEstateAdd.pictures[0].picture" class="realEstate">
+                    </div>
+                    <div class="right-box">
+                        <p>{{realEstateAdd.localisation}}</p>
+                        <p>{{realEstateAdd.surface}} m²</p>
+                        <p>{{realEstateAdd.rooms}} pièces</p>
+                        <p>{{realEstateAdd.furniture ? 'meublé' : 'non meublé'}}</p>
+                        <p>{{realEstateAdd.price | currency: 'EUR'}}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

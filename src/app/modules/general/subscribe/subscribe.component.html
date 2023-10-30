@@ -1,0 +1,29 @@
+<div class="form">
+    <form name="subscribeForm"  #f="ngForm" (ngSubmit)="f.form.valid && onSubmitForm()">
+        <div class="form-group">
+            <input type="text" name="firstName" id="firstName" placeholder="prénom" [(ngModel)]="subscribeForm.firstName" #firstName="ngModel" required >
+        </div>
+        <div class="form-group">
+            <input  type="text" name="lastName" id="lastName" placeholder="nom" [(ngModel)]="subscribeForm.lastName" #lastName="ngModel" required>
+        </div>
+        <div class="form-group">
+            <input  type="text" name="email" id="email" placeholder="email" [(ngModel)]="subscribeForm.email" #email="ngModel" required>
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" id="password" placeholder="mot de passe" [(ngModel)]="subscribeForm.password" #password="ngModel" required>
+        </div>
+        <div class="form-group">
+            <input  type="password" name="confirmPassword" id="confirmPassword" placeholder="confirmer mot de passe" [(ngModel)]="subscribeForm.confirmPassword" #confirmPassword="ngModel" required>
+        </div>
+        <div class="button">
+            <button type="submit">S'inscrire</button>
+        </div>    
+    </form>
+</div>
+<div class="form_error" *ngIf="(firstName.errors || lastName.errors || email.errors || password.errors || confirmPassword.errors) && f.submitted">
+    <p>Veuillez remplir tous les champs</p>
+ </div>
+<div class="conditions">
+    <input type="checkbox" id="checkbox" [(ngModel)]="isChecked"><p>En cliquant ici j'accepte les <a href="/conditions" target="_blank">conditions générales</a> de Jinka</p>
+</div>
+

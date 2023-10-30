@@ -1,0 +1,9 @@
+<div class="menu_lateral">
+    <div [ngStyle]="{'background-color': menu.link == page ? '#F5A6E4' : '#676B8B'}" class="menu-choice" *ngFor="let menu of allMenus">
+        <a href={{menu.link}}>
+        <img src={{menu.iconName}} class="icon">
+        <p>{{menu.title}}</p>
+        </a>
+    </div>
+    <hr>
+</div>

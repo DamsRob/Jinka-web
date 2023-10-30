@@ -1,0 +1,128 @@
+.account{
+    display: flex;
+}
+
+.profilPicture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 280px;
+    border-radius: 280px;
+    border: 3px solid #F5A6E4;
+    background: #F5A6E4;
+
+}
+
+p{
+    color: #FFF;
+    font-family: Verdana;
+    font-size: 150px;
+    font-weight: 700;
+}
+
+.account_infos{
+    display: flex;
+    margin-left: 32px;
+    margin-top: 20px;
+}
+
+.infos{
+    width: 614px;
+    height: 302px;
+    border-radius: 20px;
+    border: 3px solid #676B8B;
+    background: #FFF;
+    margin-left: 40px;
+}
+label{
+    color: #000;
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+input {
+    width: 408px;
+    height: 54px;
+    border-radius: 10px;
+    border: 1px solid #C0C0C0;
+    background: #FFF;
+}
+
+button{
+    width: 133px;
+    height: 46px;
+    border-radius: 10px;
+    background: #F5A6E4;
+    color: #FFF;
+    font-family: Verdana;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    margin-left: 25px;
+}
+
+form > div {
+    margin-left: 19px;
+}
+
+.email_form {
+    margin-top: 25px;
+}
+
+.password_form{
+    margin-top: 41px;
+}
+
+input::placeholder{
+    color: #C0C0C0;
+    font-family: Verdana;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+input{
+    color: #000;
+    font-family: Verdana;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.container_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 640px;
+    height: 108px;
+    border: none;
+    border-radius: 15px;
+    background: #F5A6E4;
+    margin-top: 38px;
+}
+
+.button  > a {
+    color: #FFF;
+    font-family: Verdana;
+    font-size: 50px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.suppress{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    color: #ED1C24;
+    font-family: Verdana;
+    font-size: 30px;
+    font-weight: 700;
+}
+

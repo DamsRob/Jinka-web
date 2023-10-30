@@ -1,0 +1,26 @@
+<div class="connexion_error">
+    <p>{{error}}</p>
+</div>
+<div class="form">
+    <form name="loginForm" #f="ngForm" (ngSubmit)="f.form.valid && onLogin()">
+        <div class="form-group">
+            <input id="email" name="email" placeholder="email" type="text" [(ngModel)]="loginForm.email" #email="ngModel" required>
+        <div class="form_error" *ngIf="email.errors && f.submitted">
+            Email is required
+        </div>
+        </div>
+        <div class="form-group">
+            <input id="password" name="password" placeholder="password" type="password" [(ngModel)]="loginForm.password" #password="ngModel" required>
+            <div class="form_error" *ngIf="password.errors && f.submitted">
+                Password is required
+            </div>
+        </div>
+        <div class="button">
+            <button type="submit">Connexion</button>
+        </div>
+    </form>
+</div>
+<div>
+    <p><a routerLink="/subscribe">Je n'ai pas de comtpe</a></p>
+</div>
+ 

@@ -1,0 +1,37 @@
+<div class="account">  
+    <app-menu></app-menu>
+    <div>
+        <div class="account_infos">
+            <div class="profilPicture">
+                <p>{{firstNameFirstLetter}}</p>
+                <p>{{lastNameFirstLetter}}</p>
+            </div>
+            <div class="infos">
+                <form>
+                    <div class="email_form">
+                        <label>Adresse électronique</label>
+                        <div>
+                            <input type="email" id="email" name="email" [disabled]="!modifyInfoList[0]" [ngStyle]="ngStyle(0)" [placeholder]="user.email" >
+                            <button (click)="modifyInfo(0)" type="button">{{modifyInfoList[0] ? 'Valider' : 'Modifer'}}</button>
+                        </div>
+                    </div>
+                    <div class="password_form">
+                        <label>Mot de passe</label>
+                        <div>
+                            <input type="password" id="password" name="password" [disabled]="!modifyInfoList[1]" [ngStyle]="ngStyle(1)" placeholder="*************">
+                            <button (click)="modifyInfo(1)" type="button">{{modifyInfoList[1] ? 'Valider' : 'Modifer'}}</button>
+                        </div>
+                    </div>
+                </form>
+            </div>  
+        </div>
+        <div class="container_button">
+            <div class="button">
+                <a href="/my-case">Voir mon dossier</a>
+            </div>
+        </div>      
+        <div class="suppress">
+            <a>Supprimer le compte</a>
+        </div>
+    </div>
+</div>

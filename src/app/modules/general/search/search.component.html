@@ -1,0 +1,28 @@
+<div class="search">
+    <app-menu></app-menu>
+    <div class="mySearch">
+        <div class="liste">
+            <ul>
+                <hr>
+                <li>Recherche : <span>{{data.localisation}}</span></li>
+                <hr>
+                <li>Type : <span>{{data.offer == 'loan' ? 'Location' : 'Achat'}}</span></li>
+                <hr>
+                <li>Surface min : <span>{{data.surfaceMin}}</span>m² - Surface max : <span>{{data.surfaceMax}}</span>m²</li>
+                <hr>
+                <li>Prix min : <span>{{data.priceMin | currency: 'EUR'}}</span> - Prix max : <span>{{data.priceMax | currency: 'EUR'}}</span></li>
+                <hr>
+                <li>Pièces : <span>{{data.rooms}}</span></li>
+                <hr>
+                <li>Chambres : <span>{{data.bedroom}}</span></li>
+                <hr>
+                <li>Meublé : <span>{{data.furniture ? 'Oui' : 'Non'}}</span></li>
+                <hr>
+            </ul>
+            <div class="button">
+                <a href="/new-search">Modifier mes critères</a>
+            </div>
+        </div>
+       
+    </div>
+</div>

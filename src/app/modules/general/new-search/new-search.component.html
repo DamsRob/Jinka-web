@@ -1,0 +1,95 @@
+<div class="newSearch" [ngStyle]="{backgroundImage: 'url(assets/images/ImageFondCritère.jpg)'}" position="sticky">
+    <div class="container">
+        <form name="searchForm" #f="ngForm" (ngSubmit)="onNewSearch()">
+            <div class="choiceOffer">
+                <div>
+                    <input type="button" value="Acheter" id="buy" name="buy" class="buyOffer" (click)="changeOffer('buy')" [ngStyle]="styleButton('buy')">
+                    <div class="svgBuy" *ngIf="choiceOffer == 'buy'">
+                        <svg height="90" width="136">
+                            <path d="M58.6809 54.367C58.2971 54.7238 57.7029 54.7238 57.3191 54.367L0.97364 1.98238C0.308228 1.36374 0.745972 0.25 1.65454 0.25L114.345 0.25C115.254 0.25 115.692 1.36374 115.026 1.98238L58.6809 54.367Z" fill="#F5A6E4"/>
+                        </svg>
+                    </div>
+                </div>
+                <div>
+                    <input type="button" value="Louer" id="loan" name="loan" class="loanOffer" (click)="changeOffer('loan')" [ngStyle]="styleButton('loan')">
+                    <div class="svgLoan"  *ngIf="choiceOffer == 'loan'">
+                        <svg height="90" width="136">
+                            <path d="M58.6809 54.367C58.2971 54.7238 57.7029 54.7238 57.3191 54.367L0.97364 1.98238C0.308228 1.36374 0.745972 0.25 1.65454 0.25L114.345 0.25C115.254 0.25 115.692 1.36374 115.026 1.98238L58.6809 54.367Z" fill="#F5A6E4"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label>
+                    Localisation
+                </label>
+                <div>
+                    <input type="text" name="localisation" placeholder="Quartier, ville, code postal, département" class="localisation" [(ngModel)]="searchForm.localisation">
+                </div>
+            </div>
+            <hr>
+            <div>
+                <label>Type de bien</label>
+                <div>
+                    <input type="button" value="Maison" id="house" name="house" (click)="changeChoice('Maison')" [ngStyle]="styleButtonType('Maison')">
+                    <input type="button" value="Appartement" id="appartment" name="appartment" (click)="changeChoice('Appartement')" [ngStyle]="styleButtonType('Appartement')">
+                    <input type="button" value="Parking" id="parking" name="parking" (click)="changeChoice('Parking')" [ngStyle]="styleButtonType('Parking')">
+                </div>
+            </div>
+            <hr>
+            <div class="surface">
+                <div class="min">
+                    <label>Surface Min</label>
+                    <input type="number" id="surfaceMin" name="surfaceMin">
+                </div>
+                <div class="max">
+                    <label>Surface Max</label>
+                    <input type="number" id="surfaceMax" name="surfaceMax">
+                </div>
+            </div>
+            <hr>
+            <div class="surface">
+                <div class="min">
+                    <label>Prix Min</label>
+                    <input type="number" id="priceMin" name="priceMin">
+                </div>
+                <div class="max">
+                    <label>Prix Max</label>
+                    <input type="number" id="priceMax" name="priceMax">
+                </div>
+            </div>
+            <hr>
+            <div>
+                <label>Nombre de pièces</label>
+                <div>
+                    <input type="button" value="Studio" id="studio" name="studio" (click)="changeRooms(0)" [ngStyle]="styleButtonRooms(0)">
+                    <input type="button" value="2" id="rooms2" name="rooms2" (click)="changeRooms(1)" [ngStyle]="styleButtonRooms(1)">
+                    <input type="button" value="3" id="rooms3" name="rooms3" (click)="changeRooms(2)" [ngStyle]="styleButtonRooms(2)">
+                    <input type="button" value="4" id="rooms4" name="rooms4" (click)="changeRooms(3)" [ngStyle]="styleButtonRooms(3)">
+                    <input type="button" value="+5" id="rooms5" name="rooms5" (click)="changeRooms(4)" [ngStyle]="styleButtonRooms(4)">
+                </div>
+            </div>
+            <hr>
+            <div>
+                <label>Nombre de chambres</label>
+                <div>
+                    <input type="button" value="0" id="bedrooms0" name="bedrooms0" (click)="changeBedRooms(0)" [ngStyle]="styeButtonBedRooms(0)">
+                    <input type="button" value="1" id="bedrooms1" name="bedrooms1" (click)="changeBedRooms(1)" [ngStyle]="styeButtonBedRooms(1)">
+                    <input type="button" value="2" id="bedrooms2" name="bedrooms2" (click)="changeBedRooms(2)" [ngStyle]="styeButtonBedRooms(2)">
+                    <input type="button" value="3" id="bedrooms3" name="bedrooms3" (click)="changeBedRooms(3)" [ngStyle]="styeButtonBedRooms(3)">
+                    <input type="button" value="4" id="bedrooms4" name="bedrooms4" (click)="changeBedRooms(4)" [ngStyle]="styeButtonBedRooms(4)">
+                </div>
+            </div>
+            <div>
+                <label>Meublé / Non meublé</label>
+                <div>
+                    <input type="button" value="Meublé" name="furnished" (click)="changeFurnishedChoice(0)" [ngStyle]="styleButtonFurnished(0)">
+                    <input type="button" value="Non meublé" name="notFurnished" (click)="changeFurnishedChoice(1)" [ngStyle]="styleButtonFurnished(1)">
+                </div>
+                </div>
+            <div class="submit">
+                <button type="submit" [disabled]="allItemsNotEmpty()" [ngStyle]="allItemsNotEmpty() ? {background: '#F5A6E4'} : {background: 'linear-gradient(0deg, rgba(249, 249, 249, 0.65) 0%, rgba(249, 249, 249, 0.65) 100%), #F5A6E4'}">Valider les critères</button>
+            </div>
+        </form>
+    </div>
+</div>

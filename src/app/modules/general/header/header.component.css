@@ -1,0 +1,25 @@
+div{
+    width: 100%;
+}
+
+.firstRectangle{
+    background-color: #676B8B;
+    height: 83px;
+}
+
+.secondRectangle {
+    background-color: #F5A6E4;
+    height: 104px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    color: white;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: Verdana;
+    font-weight: 700;
+    line-height: normal;
+}

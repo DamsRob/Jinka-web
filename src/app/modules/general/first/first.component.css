@@ -1,0 +1,51 @@
+h1{
+    color: #000;
+    font-family: verdana;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 94px;
+}
+
+p{
+    color: #676B8B;
+    font-family: Verdana;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+img{
+    width: 478px;
+    height: 300px;
+    border-radius: 50px;
+}
+
+.goToLog{
+    border-radius: 31.5px;
+    background: #F5A6E4;
+    width: 380px;
+    height: 63px;
+    flex-shrink: 0;
+    padding: 5px 30px;
+    display: flex;
+    margin: auto;
+}
+
+a{
+    color: #FFF;
+    font-family: Verdana;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+}

@@ -1,0 +1,97 @@
+<div class="search">
+    <app-menu></app-menu>
+    <div class="infos">
+        <div class="mainBox">
+            <form class="form1" name="form1" (ngSubmit)="!modifyInfos[0]">
+                <div>
+                    <label>Prénom : </label>
+                    <input type="text" id="firstName" [placeholder]="user.firstName" [disabled]="!modifyInfos[0]">
+                </div>
+                <div>
+                    <label>Nom :</label>
+                    <input type="text" id="lastName" [placeholder]="user.lastName" [disabled]="!modifyInfos[0]">
+                </div>
+                <div>
+                    <label>Adresse électronique : </label>
+                    <input type="email" id="email" [placeholder]="user.email" [disabled]="!modifyInfos[0]">
+                </div>  
+                <div>
+                    <label>Téléphone : </label>
+                    <input type="tel" id="firstName" [placeholder]="phone" [disabled]="!modifyInfos[0]">
+                </div>
+                <div class="button">
+                    <button type="button" (click)="onClick(0)">{{modifyInfos[0] ? 'Validez les changements' : 'Modifier les infos'}}</button>
+                </div>
+            </form>
+        </div>
+        <div class="docBox">
+            <form class="form2">
+                <div>
+                    <label>Pièce d'identité : </label>
+                    <input type="file" id="identityCard" accept=".jpg, .pdf" [disabled]="!modifyInfos[1]">
+                </div>
+                <div>
+                    <label>Contrat de travail : </label>
+                    <input type="file" id="workContract" [disabled]="!modifyInfos[1]">
+                </div>
+                <div>
+                    <label>Fiche de paie : </label>
+                    <input type="file" id="payslip" [disabled]="!modifyInfos[1]">
+                </div>  
+                <div>
+                    <label>Avis d'imposition : </label>
+                    <input type="file" id="taxNotice" [disabled]="!modifyInfos[1]">
+                </div>
+                <div class="button">
+                    <button type="button" (click)="onClick(1)">{{modifyInfos[1] ? 'Validez les changements' : 'Modifier les infos'}}</button>
+                </div>
+            </form>
+        </div>
+        <div class="infoBox">
+            <form class="form3">
+                <div>
+                    <label>Poste : </label>
+                    <select name="job" id="job-select" [disabled]="!modifyInfos[2]">
+                        <option *ngFor="let job of jobList">{{job}}</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Revenus net : </label>
+                    <input type="number" id="workContract" [disabled]="!modifyInfos[2]">
+                </div>
+                <div>
+                    <label>Nom de l'entreprise : </label>
+                    <input type="text" id="company" [disabled]="!modifyInfos[2]">
+                </div>  
+                <div>
+                    <label>Allocation : </label>
+                    <select name="help" id="help-select" [disabled]="!modifyInfos[2]">
+                        <option *ngFor="let help of helpList">{{help}}</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Valeurs : </label>
+                    <input type="number" id="helpPrice" [disabled]="!modifyInfos[2]">
+                </div>
+                <div class="button">
+                    <button type="button" (click)="onClick(2)">{{modifyInfos[2] ? 'Validez les changements' : 'Modifier les infos'}}</button>
+                </div>
+            </form>
+        </div>
+        <div class="guarantorBox">
+            <div>
+                <label>Garant : </label>
+                <select name="help" id="help-select" [disabled]="!modifyInfos[3]">
+                    <option *ngFor="let haveGuarantor of guarantorList">{{haveGuarantor}}</option>
+                </select>
+            </div>
+            <div>
+                <label>Revenus net : </label>
+                <input type="number" id="guarantorPayslip" [disabled]="!modifyInfos[3]">
+            </div>
+            <div class="button">
+                <button (click)="onClick(3)">{{modifyInfos[3] ? 'Validez les changements' : 'Modifier les infos'}}</button>
+            </div>
+        </div>
+    </div>
+</div>
